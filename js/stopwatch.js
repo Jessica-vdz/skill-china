@@ -1,45 +1,44 @@
-const display = document.getElementById("display");
-let timer = null;
-let startTime = 0;
-let elapsedTime = 0;
+let timer;
 let isRunning = false;
+let time = 0;
 
-function start(){
-    if(!isRunning){
-        startTime = Date.now() - elapsedTime;
-        timer = setInterval(update,10);
-        isRunning = true;
-    }
+const stopwatch = document.getElementById("stopwatch");
+const startPauseButton = document.getElementById("startPauseButton");
+const resetButton = document.getElementById("resetButton");
 
-    console.log(startTime)
+function updateStopwatch() {
+    let hours = Math.floor(time / 3600);
+    let minutes = Math.floor((time % 3600) / 60);
+    let seconds = time % 60;
+
+    hours = hours < 10 ? '0' + hours : hours;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
+
+    stopwatch.textContent = `${hours}:${minutes}:${seconds}`;
 }
-function stop(){
 
-    if(isRunning){
+// Functie om de timer te starten of te pauzeren
+function toggleTimer() {
+    if (isRunning) {
         clearInterval(timer);
-        elapsedTime = Date.now() - startTime;
-        isRunning = false;
+        startPauseButton.textContent = "Start"; 
+    } else {
+        timer = setInterval(() => {
+            time++;
+            updateStopwatch();
+        }, 500); // made it two times faster
+        startPauseButton.textContent = "Pauze";
     }
+    isRunning = !isRunning;
 }
-function reset(){
+
+function resetStopwatch() {
     clearInterval(timer);
-    startTime = 0;
-    elapsedTime = 0;
     isRunning = false;
-    display.textContent = "00:00:00:00"
-}   
-function update(){
-    const currentTime = Date.now();
-    elapsedTime = currentTime - startTime;
-
-    let hours = Math.floor(elapsedTime / (1000 * 60 * 60));
-    let minutes = Math.floor(elapsedTime / (100 * 60) % 60); 
-    let seconds = Math.floor(elapsedTime / 1000 % 60 );
-    let miliseconds = Math.floor(elapsedTime % 1000 / 10); 
-
-    hours = String(hours).padStart(2,"0");
-    minutes = String(minutes).padStart(2, "0");
-    seconds = String(seconds).padStart(2,"0");
-    miliseconds = String(miliseconds).padStart(2, "0");
-    display.textContent = `${hours}:${minutes}:${seconds}:${miliseconds}`;
+    time = 0;
+    updateStopwatch();
+    startPauseButton.textContent = "Start";
 }
+startPauseButton.addEventListener("click", toggleTimer);
+resetButton.addEventListener("click", resetStopwatch);
