@@ -3,8 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="./style/style.css">
     <title>China</title>
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "0px";
+        }
+    
+    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+    </script>
 </head>
 <body>
     <nav>
@@ -14,21 +27,39 @@
             <a href="#">Population</a>
             <a href="#">Nature</a>
             <a href="#">Politics</a>
-            <a href="#">Child Labour</a>
+            <a href="./pages/child_labour.html">Child Labour</a>
             <a href="#">Militairy</a>
             <a href="#">History</a>
-            <a href="#" id="contact">Contact</a>
+            <a href="javascript:void(0);" id="contactLink">Contact</a>
+            <div id="contactForm" class="modal">
+                <div class="modal-content">
+                    <span class="close" id="closeBtn">&times;</span>
+                    <h2>Contact Us</h2>
+                    <form>
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" required><br><br>
+                        
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" required><br><br>
+                        
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" required></textarea><br><br>
+                        
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
           </div>
           
-          <div id="main">
+          <div class="menubutton" style="margin-left: 0;">
             <button class="openbtn" onclick="openNav()">&#9776;</button>
           </div>
     </nav>
-    <main class="grid">
-        <header id="headtitle">
-            <h1 id="China">China</h1>
+    <div class="grid">
+        <header class="headtitle">
+            <h1 class="China">China</h1>
         </header>
-        <section class="Main">
+        <main class="Main">
             <article class="collections">
                 <h3>Population</h3>
             </article>
@@ -47,8 +78,14 @@
             <article class="collections">
                 <h3>History</h3>
             </article>
-        </section>
-        <section class="collections2">
+        </main>
+
+
+
+    <!-- The Contact Form Modal -->
+
+
+        <div class="collections2">
             <article class="collectionsitems">
                 <h3>China</h3>
                 <p>China, officially the People's Republic of China (PRC), is a country in East Asia.
@@ -66,22 +103,11 @@
                     China accounts for almost half of the world’s e-commerce transactions, is home to nine of the 23 privately held FinTech unicorns and holds 29% of the world’s renewable energy patents.
                      Advancements by companies like Huawei, Baidu, JD and Tencent are helping the Chinese economy grow at an unprecedented rate and influencing the global economy.  </p>
             </article>
-        </section>
-    </main>
+        </div>
+    </div>
     <footer>
         <h3>Jessica van der Zwaag #copyright</h3>
     </footer>
+    <script src="./js/script.js"></script>
 </body>
-<script>
-    function openNav() {
-        document.getElementById("mySidebar").style.width = "250px";
-        document.getElementById("main").style.marginLeft = "0px";
-    }
-
-/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
-    function closeNav() {
-        document.getElementById("mySidebar").style.width = "0";
-        document.getElementById("main").style.marginLeft = "0";
-    }
-</script>
 </html>
