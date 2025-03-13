@@ -1,19 +1,208 @@
 :root{
-  --background: #CC232A;
-  --box: #A3262A;
-  --textColor:#F5AC27;
-  --font1:"font1";
-  --font2:"font2";
+  --background: #DD4242;
+  --boxes: #9F3333;
+  --menu: #7f2828;
+  --font1: "CustomFont";
+  --font2: "NormalFont";
+}
+
+@font-face {
+  font-family: "CustomFont";
+  src: url(../style/hHittoSushi.ttf);
 }
 @font-face {
-  font-family: "font1";
-  src: url(./hHittoSushi.ttf);
-}
-@font-face {
-  font-family: "font2";
+  font-family: "NormalFont";
   src: url(./Korean_Calligraphy.ttf);
 }
 *{
   margin: 0;
   padding: 0;
+  color: #E1B751;
+  font-size:  62.5%;
+  letter-spacing: 1px;
+}
+body{
+  background-color: var(--background);
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--menu);
+  font-family: var(--font2);
+  overflow-x: hidden;
+  padding-top: 60px; 
+  transition: 0.5s;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  margin-left:2rem ;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #f5efef00;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #7f2828;
+  border-radius: 15px;
+}
+
+.menubutton {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Modal content */
+.modal-content {
+  background-color: var(--menu);
+  margin: 15% auto;
+  padding: 20px;
+  width: 50rem;
+  font-size: 5rem;
+}
+input, textarea{
+background-color: rgb(147, 48, 48);
+border: none;
+padding: 1rem;
+}
+
+.close {
+  color: #381313;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close{
+  margin: 2rem auto;
+  padding:1rem;
+  font-size: 12rem;
+  background-color: #9F3333;
+  height: max-content;
+  color:#E1B751;
+  text-align: center;
+}
+
+.close:hover,
+.close:focus {
+  color: #381313;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* main*/
+.grid{
+  width: 80vw;
+  margin: auto;
+}
+
+.headtitle {
+  margin: 2rem auto;
+  padding: 1rem;
+  font-size: 12rem;
+  background-color: #9F3333;
+  height: max-content;
+  color: #E1B751;
+  font-family: var(--font1);
+  text-align: center;
+}
+
+.Main{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+.collections{
+  background-color: #9F3333;
+  font-family: var(--font1);
+  width: 23rem;
+  height: 30rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  display: flex;
+  align-items: end;
+  padding-left:1rem ;
+  text-align: start;
+  padding-bottom: 1rem;
+  font-size: 5rem;
+}
+
+.collections2{
+  height: fit-content;
+  margin-bottom: 1rem;
+  font-family: var(--font2);
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  font-size: 5rem;
+}
+.collectionsitems{
+  text-align: start;
+  background-color: #9F3333;
+  width: 47%;
+  height: 30rem;
+  padding: 2rem;
+}
+.collectionsitems h3{
+  margin-bottom: 2rem;
+  font-size: 4rem
+}
+
+#politicsimg{
+  display: flex;
+  justify-content: center;
+}
+
+/* stopwatch*/
+#stopwatch {
+  font-size: 30px;
+  margin: 20px;
+}
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px;
 }
