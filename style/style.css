@@ -118,11 +118,11 @@ padding: 1rem;
 .close{
   margin: 2rem auto;
   padding:1rem;
-  font-size: 12rem;
-  background-color: #9F3333;
-  height: max-content;
+  font-size: 5rem;
+  width: 2rem;
+  height: 2rem;
   color:#E1B751;
-  text-align: center;
+  display: flex;
 }
 
 .close:hover,
@@ -159,7 +159,7 @@ padding: 1rem;
   background-color: #9F3333;
   font-family: var(--font1);
   width: 23rem;
-  height: 30rem;
+  min-height: 30rem;
   margin-bottom: 2rem;
   overflow: hidden;
   display: flex;
@@ -171,7 +171,7 @@ padding: 1rem;
 }
 
 .collections2{
-  height: fit-content;
+  min-height: fit-content;
   margin-bottom: 1rem;
   font-family: var(--font2);
   display: flex;
@@ -183,7 +183,7 @@ padding: 1rem;
   text-align: start;
   background-color: #9F3333;
   width: 47%;
-  height: 30rem;
+  min-height: 30rem;
   padding: 2rem;
 }
 .collectionsitems h3{
@@ -197,6 +197,12 @@ padding: 1rem;
 }
 
 /* stopwatch*/
+#stopwatch1{
+  background-color: var(--boxes);
+  display: flex;
+  width: 49rem;
+  justify-content: center;
+}
 #stopwatch {
   font-size: 30px;
   margin: 20px;
