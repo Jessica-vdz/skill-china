@@ -153,12 +153,14 @@ padding: 1rem;
   justify-content: space-between;
   align-items: center;
   text-align: left;
+  flex-wrap: wrap;
 }
 
 .collections{
   background-color: #9F3333;
   font-family: var(--font1);
-  width: 23rem;
+  min-width: 20rem;
+  max-width: 23rem;
   min-height: 30rem;
   margin-bottom: 2rem;
   overflow: hidden;
@@ -182,7 +184,7 @@ padding: 1rem;
 .collectionsitems{
   text-align: start;
   background-color: #9F3333;
-  width: 47%;
+  width: 45%;
   min-height: 30rem;
   padding: 2rem;
 }

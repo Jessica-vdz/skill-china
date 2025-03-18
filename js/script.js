@@ -18,3 +18,11 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+let data = {
+    "text": "winter",
+    "img": "/img/winter.png",
+}
+
+console.log(data.text);
+console.log(data.img);
