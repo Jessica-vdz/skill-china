@@ -155,7 +155,10 @@ padding: 1rem;
   text-align: left;
   flex-wrap: wrap;
 }
-
+.collections2{
+  display: flex;
+  flex-direction: row;
+}
 .collections{
   background-color: #9F3333;
   font-family: var(--font1);
@@ -190,7 +193,12 @@ padding: 1rem;
 }
 .collectionsitems h3{
   margin-bottom: 2rem;
-  font-size: 4rem
+  font-size: 4rem;
+  font-family: var(--font1);
+}
+.collectionsitems p{
+  font-size: 2rem;
+  font-family: var(--font2);
 }
 
 #politicsimg{
@@ -201,8 +209,10 @@ padding: 1rem;
 /* stopwatch*/
 #stopwatch1{
   background-color: var(--boxes);
-  display: flex;
   width: 49rem;
+  padding: 1rem;
+  display: flex;
+  text-align: center;
   justify-content: center;
 }
 #stopwatch {
@@ -213,6 +223,7 @@ button {
   padding: 10px 20px;
   font-size: 16px;
   margin: 10px;
+  width: 10rem;
 }
 .imgbox{
   max-width: 600px;
@@ -226,7 +237,7 @@ button {
   justify-content: center;
   align-items: center;
 }
-.main{
+.main1{
   width: 100%;
   padding: 1rem 0rem;
   display: flex;
