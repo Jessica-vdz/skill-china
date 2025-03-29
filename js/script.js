@@ -36,14 +36,18 @@ const text = {
 
 slider.oninput = function(){
     output.innerHTML = this.value;
-
+    document.getElementById("gone").innerHTML= "";
     if(this.value == 1){
         document.getElementById("js--img").src= images.winter;
+        document.getElementById("season").innerText = text.winter
     }if(this.value == 2){
-        document.getElementById("js--img").src= images.spring;
+        document.getElementById("js--img").src= images.spring;        
+        document.getElementById("season").innerText = text.spring
     }if(this.value == 3){
         document.getElementById("js--img").src= images.summer;
+        document.getElementById("season").innerText = text.summer
     }if(this.value == 4){
         document.getElementById("js--img").src= images.fall;
+        document.getElementById("season").innerText = text.fall
     }
 }
