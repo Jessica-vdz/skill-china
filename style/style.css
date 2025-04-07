@@ -227,6 +227,7 @@ button {
 }
 .imgbox{
   overflow: hidden;
+
 }
 #js--img{
   margin-top: 1rem;
@@ -245,4 +246,18 @@ button {
 .head1{
   font-size: 4.5rem;
   font-family: var(--font2);
+}
+.game{
+  width: 49%;
+  height: 50rem;
+  background-color: var(--boxes);
+}
+#butt{
+  height: 38rem;
+  width: 38rem;
+  background-color: var(--boxes);
+  border: 1px solid black;
+}
+#scoretext{
+  font-size: 3rem;
 }

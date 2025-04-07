@@ -27,7 +27,7 @@ function toggleTimer() {
         timer = setInterval(() => {
             time++;
             updateStopwatch();
-        }, 500); // made it two times faster
+        }, 1000); // made it two times faster
         startPauseButton.textContent = "Pauze";
     }
     isRunning = !isRunning;

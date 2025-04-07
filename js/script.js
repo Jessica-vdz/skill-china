@@ -4,6 +4,7 @@ var closeBtn = document.getElementById("closeBtn");
 var slider = document.getElementById("myRange");
     var output = document.getElementById("demo");
     output.innerHTML = slider.value;
+
 // When the user clicks on the "Contact" link, show the modal
 contactLink.onclick = function() {
     modal.style.display = "block";
@@ -51,3 +52,4 @@ slider.oninput = function(){
         document.getElementById("season").innerText = text.fall
     }
 }
+
