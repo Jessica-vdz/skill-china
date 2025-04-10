@@ -17,6 +17,34 @@
             document.getElementById("mySidebar").style.width = "0";
             document.getElementById("main").style.marginLeft = "0";
         }
+
+        fetch('../js/upgrades.json')
+    .then(response => response.json())
+    .then(data => {
+        const slider = document.getElementById("seasonSlider");
+
+       
+        const seasonTitle = document.getElementById("season-title");
+        const seasonImage = document.getElementById("season-image");
+
+       
+        function updateSeasonDisplay(sliderValue) {
+            const seasonData = data.files[sliderValue]; 
+
+            seasonTitle.textContent = seasonData.description;
+            seasonImage.src = seasonData.path;
+            seasonImage.alt = seasonData.description;
+        }
+
+        // Voer de functie uit voor de initiële waarde van de slider
+        updateSeasonDisplay(slider.value);
+
+        // Voeg een event listener toe om de afbeelding en tekst bij te werken bij wijziging van de slider
+        slider.addEventListener('input', function() {
+            updateSeasonDisplay(slider.value);
+        });
+    })
+    .catch(error => console.error('Er is een fout opgetreden bij het laden van de JSON:', error));
     </script>
 </head>
 <body>
@@ -29,7 +57,7 @@
             <a href="#">Politics</a>
             <a href="./child_labour.html">Child Labour</a>
             <a href="#">Militairy</a>
-            <a href="#">History</a>
+            <a href="">History</a>
             <a href="javascript:void(0);" id="contactLink">Contact</a>
             <div id="contactForm" class="modal">
                 <div class="modal-content">
@@ -62,19 +90,14 @@
             <h1 class="China">Nature</h1>
         </header>
         <main class="main1">
-            <article class="head1">
-                <h3 id="gone">China has 4 beautiful seasons.</h3>
-                <br>
-                <h3 id="season">Lets see how the color changes in every season</h3>
-            </article>
-            <figure class="imgbox" id="imgboxx">
-                <img src="../img/winter.png" alt="" id="js--img">
-                <p id="js--text"></p>
-            </figure>
-            <section>
-                <input type="range" min="1" max="5" value="1" class="slider" id="myRange">
-                <h3 id="demo"></h3>
-            </section>
+      
+            <!-- Waar de afbeelding en beschrijving weergegeven worden -->
+            <div id="season-display">
+                <input type="range" id="seasonSlider" min="0" max="3" step="1" value="0">
+                <h2 id="season-title"></h2>
+                <img id="season-image" alt="" src="" />
+            </div>
+            <script src="script.js"></script>
        </main>
     </div>
 <script src="../js/script.js"></script>

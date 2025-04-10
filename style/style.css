@@ -247,17 +247,29 @@ button {
   font-size: 4.5rem;
   font-family: var(--font2);
 }
-.game{
-  width: 49%;
-  height: 50rem;
-  background-color: var(--boxes);
-}
-#butt{
-  height: 38rem;
-  width: 38rem;
-  background-color: var(--boxes);
-  border: 1px solid black;
-}
 #scoretext{
   font-size: 3rem;
+}
+.game{
+  padding: 1em;
+  width: 65rem;
+  height: 50rem;
+  background-color: var(--boxes);
+  grid-column: 2;
+  grid-row: 1;
+}
+.graf{
+  padding: 1em;
+  width: 65rem;
+  height: 22Srem;
+  background-color: #7f2828;
+  grid-row: 1;
+  grid-column: 1;
+}
+.grid2{
+  margin: auto;
+  width: 80vw;
+  display: grid;
+  grid-template-columns: 65rem 65rem;
+  grid-template-rows: 50rem;
 }
