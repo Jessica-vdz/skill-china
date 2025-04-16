@@ -1,0 +1,20 @@
+{
+    "files": [
+      {
+        "description": "Summer",
+        "path": "../img/summer.png"
+      },
+      {
+        "description": "Fall",
+        "path": "../img/fall.png"
+      },
+      {
+        "description": "Winter",
+        "path": "../img/winter.png"
+      },
+      {
+        "description": "Spring",
+        "path" : "../img/spring.png"
+      }
+    ]
+  }

@@ -12,7 +12,6 @@ const upgrades = {
 }
 function cookieClicker(){
     coins++;
-    document.getElementById("pic").src=bat.second;
     document.getElementById('scoretext').innerHTML = coins + " coins";
 }
 

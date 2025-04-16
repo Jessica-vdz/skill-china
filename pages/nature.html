@@ -7,23 +7,10 @@
     <link rel="stylesheet" href="../style/style.css">
     <title>Nature</title>
     <script>
-        function openNav() {
-            document.getElementById("mySidebar").style.width = "250px";
-            document.getElementById("main").style.marginLeft = "0px";
-        }
-    
-    /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
-        function closeNav() {
-            document.getElementById("mySidebar").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-        }
-
-        fetch('../js/upgrades.json')
+        fetch('../js/season.json')
     .then(response => response.json())
     .then(data => {
-        const slider = document.getElementById("seasonSlider");
-
-       
+        const slider = document.getElementById("seasonSlider");       
         const seasonTitle = document.getElementById("season-title");
         const seasonImage = document.getElementById("season-image");
 

@@ -1,23 +1,42 @@
+// Verkrijg de modal en knoppen
 var modal = document.getElementById("contactForm");
-var contactLink = document.getElementById("contactLink");
+var btn = document.getElementById("contactLink");
 var closeBtn = document.getElementById("closeBtn");
-var slider = document.getElementById("myRange");
-    var output = document.getElementById("demo");
-    output.innerHTML = slider.value;
 
-// When the user clicks on the "Contact" link, show the modal
-contactLink.onclick = function() {
-    modal.style.display = "block";
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "0px";
+}
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+}
+function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "0px";
 }
 
-// When the user clicks on the close button, close the modal
-closeBtn.onclick = function() {
+function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+}
+btn.addEventListener('click', function() {
+modal.style.display = "block";
+});
+
+      
+closeBtn.addEventListener('click', function() {
+modal.style.display = "none";
+});
+
+window.addEventListener('click', function(event) {
+if (event.target === modal) {
     modal.style.display = "none";
 }
+});
 
-// When the user clicks anywhere outside the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+document.getElementById("contactFormFields").onsubmit = function(event) {
+event.preventDefault(); 
+alert("Your message has been sent!"); 
+modal.style.display = "none"; 
 }

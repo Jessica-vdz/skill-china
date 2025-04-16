@@ -5,7 +5,9 @@
   --font1: "CustomFont";
   --font2: "NormalFont";
 }
-
+html{
+  font-size: 62.5%;
+}
 @font-face {
   font-family: "CustomFont";
   src: url(../style/hHittoSushi.ttf);
@@ -18,11 +20,11 @@
   margin: 0;
   padding: 0;
   color: #E1B751;
-  font-size:  62.5%;
   letter-spacing: 1px;
 }
 body{
   background-color: var(--background);
+  font-size: 2rem;
 }
 
 .sidebar {
@@ -42,7 +44,6 @@ body{
 .sidebar a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
-  font-size: 25px;
   display: block;
   transition: 0.3s;
 }
@@ -140,7 +141,7 @@ padding: 1rem;
 .headtitle {
   margin: 2rem auto;
   padding: 1rem;
-  font-size: 12rem;
+  font-size: 2em;
   background-color: #9F3333;
   height: max-content;
   color: #E1B751;
@@ -172,7 +173,7 @@ padding: 1rem;
   padding-left:1rem ;
   text-align: start;
   padding-bottom: 1rem;
-  font-size: 5rem;
+  font-size: 2rem;
 }
 
 .collections2{
@@ -251,17 +252,19 @@ button {
   font-size: 3rem;
 }
 .game{
-  padding: 1em;
+  padding: 1rem;
   width: 65rem;
-  height: 50rem;
+  height: fit-content;
   background-color: var(--boxes);
   grid-column: 2;
   grid-row: 1;
+  display: flex;
+  justify-content: center;
 }
 .graf{
   padding: 1em;
   width: 65rem;
-  height: 22Srem;
+  height: 32rem;
   background-color: #7f2828;
   grid-row: 1;
   grid-column: 1;
@@ -271,5 +274,14 @@ button {
   width: 80vw;
   display: grid;
   grid-template-columns: 65rem 65rem;
+  gap: 20rem;
   grid-template-rows: 50rem;
+}
+.upgradebtn{
+  width: fit-content;
+}
+#butt{
+  width: 99%;
+  background-color: transparent;
+  border: none;
 }
